@@ -42,6 +42,20 @@
             --accentd: #7B6F45;
         }
 
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .fade-in-up {
+            animation: 0.75s both fadeInUp;
+        }
+
         body {
             background-color: var(--base);
         }
@@ -360,5 +374,33 @@
         <p><span>&copy; <script>document.write(new Date().getFullYear())</script> Apex Development Group, LLC.</span>
         <br>All Rights Reserved.</p>
     </footer>
+
+    <script lang="javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('hr, aside *, main *, section *, footer *') // fade all the things
+
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.35 // adjust threshold as needed
+            }
+
+            const handleIntersection = (elements, observer) => {
+                elements.forEach((element) => {
+                    if (element.isIntersecting && element.intersectionRatio > 0) {
+                        element.target.classList.add('fade-in-up')
+                        observer.unobserve(element.target)
+                    }
+                })
+            }
+
+            const observer = new IntersectionObserver(handleIntersection, options)
+
+            elements.forEach((element) => {
+                element.style.setProperty('opacity', 0) // prevent fouc/foutc
+                observer.observe(element)
+            })
+        })
+    </script>
 </body>
 </html>
