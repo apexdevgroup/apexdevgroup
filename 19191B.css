@@ -1,9 +1,9 @@
 :root {
-    --base: #12222C;
-    --light: #90A0A9;
-    --dark: #081014;
-    --accent: #D5BC72;
-    --accentd: #7B6F45;
+    --base: #19191B;
+    --light: #696871;
+    --dark: #09090B;
+    --accent: #A79865;
+    --hr: #2D2D30;
 }
 
 @keyframes fadeInUp {
@@ -34,8 +34,8 @@ a {
     text-decoration: none;
 }
 hr {
-    margin: 0 75px;
-    background-color: var(--light);
+    margin: 0 25px;
+    background-color: var(--hr);
     border: 0;
     height: 1px;
 }
@@ -44,100 +44,76 @@ hr {
         margin: 0 25px;
     }
 }
+
 .btn {
-    display: none;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: var(--accent);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    font-size: 21px;
 }
 
 header {
-    padding: 75px;
-    min-height: 70vh;
-    text-align: center;
+    /* padding: 25px; */
+    /* min-height: 70vh; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: white;
+    /* justify-content: center; */
 }
 header h1 {
+    padding: 25px;
     font-family: "Archivo";
     font-weight: 600;
-    font-size: 25rem;
-    text-align: center;
-    padding: 25px 0;
-    margin-bottom: 75px;
+    font-size: 1.5rem;
     text-transform: uppercase;
     background-color: var(--base);
     color: white;
-    line-height: 0.8;
+    width: 100vw;
 }
 header h1::first-letter {
-    background: url(apex-a.png) center/92% no-repeat;
+    background: url(apex-a.png) center/98% no-repeat;
     color: transparent;
 }
-header h1 span {
-    font-size: 6rem;
-    display: block;
-}
 header p {
-    text-align: left;
-    color: var(--dark);
-    font-size: 3.8rem;
-    font-weight: 400;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 0 10%;
 }
 header p b {
+    font-weight: 400;
+}
+header p:not(:last-child) {
+    margin-bottom: 30px;
+}
+header p+p {
+    font-size: 3rem;
     font-weight: 700;
 }
 header p em {
-    color: var(--accentd);
     font-style: initial;
-    font-weight: 700;
+    /* font-weight: 700; */
+    text-decoration: underline;
+}
+header a.btn {
+    margin-left: 10%;
 }
 @media only screen and (max-width: 767px) {
     /* Styles for mobile devices */
-    header {
-        min-height: initial;
-        padding: 20px;
-    }
-    header h1 {
-        font-size: 7rem;
-        margin-bottom: initial;
-        line-height: 0.9;
-    }
-    header h1 span {
-        font-size: 1.7rem;
-    }
-    header p {
-        margin: 50px 0;
-        font-size: 1.2rem;
-    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     /* Styles for tablets */
-    header h1 {
-        font-size: 13rem;
-    }
-    header h1 span {
-        font-size: 3.1rem;
-    }
-    header p {
-        font-size: 2.5rem;
-    }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1365px) {
     /* Styles for small laptops and desktops */
-    header h1 {
-        font-size: 18rem;
-    }
-    header h1 span {
-        font-size: 4.3rem;
-    }
-    header p {
-        font-size: 3.2rem;
-    }
 }
 
 aside {
-    background-color: var(--accent);
-    background: linear-gradient(180deg, var(--dark) 0%, var(--base) 100%);
     padding: 75px;
 }
 aside p {
@@ -185,7 +161,7 @@ main:has(> div:only-child) {
 main h2 {
     font-size: 2.8rem;
     break-inside: avoid-column;
-    color: var(--accent);
+    color: var(--light);
     margin-bottom: 15px;
     font-weight: 400;
 }
