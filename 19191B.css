@@ -37,13 +37,15 @@ a {
     text-decoration: none;
 }
 hr {
-    margin: 0 25px;
-    background-color: var(--hr);
-    border: 0;
-    height: 1px;
+    display: none;
 }
 @media only screen and (max-width: 767px) {
     hr {
+        display: block;
+        margin: 0 25px;
+        background-color: var(--hr);
+        border: 0;
+        height: 1px;
         margin: 0 25px;
     }
 }
@@ -62,11 +64,8 @@ hr {
 }
 
 header {
-    /* padding: 25px; */
-    /* min-height: 70vh; */
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
 }
 header h1 {
     padding: 25px;
@@ -91,11 +90,13 @@ header .stuck {
     z-index: 100;
     border-bottom: 1px solid var(--hr);
 }
+header div {
+    margin: 125px 20%;
+}
 header p {
     color: white;
     font-size: 1.4rem;
     font-weight: 300;
-    margin: 0 10%;
 }
 header p b {
     font-weight: 400;
@@ -109,14 +110,16 @@ header p+p {
 }
 header p em {
     font-style: initial;
-    /* font-weight: 700; */
     text-decoration: underline;
-}
-header a.btn {
-    margin-left: 10%;
 }
 @media only screen and (max-width: 767px) {
     /* Styles for mobile devices */
+    header div {
+        margin: 25px;
+    }
+    header p+p {
+        font-size: 2rem;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     /* Styles for tablets */
@@ -124,14 +127,17 @@ header a.btn {
 @media only screen and (min-width: 1024px) and (max-width: 1365px) {
     /* Styles for small laptops and desktops */
 }
+@media only screen and (min-width: 1366px) {
+    /* Styles for large desktops */
+}
 
 aside {
     padding: 75px;
+    color: rgba(255, 255, 255, 0.75);
 }
 aside p {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 aside p:not(:last-of-type) {
     margin-bottom: 25px;
@@ -171,18 +177,18 @@ main:has(> div:only-child) {
     }
 }
 main h2 {
-    font-size: 2.8rem;
+    font-size: 1.2rem;
     break-inside: avoid-column;
     color: var(--light);
     margin-bottom: 15px;
     font-weight: 400;
 }
 main h2 + p {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     line-height: 1.8rem;
 }
 main p, main ul li {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 300;
 }
 main h2 + p:not(:last-child) {
