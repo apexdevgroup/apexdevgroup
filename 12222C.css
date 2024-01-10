@@ -230,26 +230,7 @@ main h2 + p:not(:last-child) {
 }
 
 section {
-    background-color: var(--base);
-    background: linear-gradient(180deg, var(--base) 0%, var(--dark) 100%);
-    padding: 50px 25px;
-    color: white;
-}
-section h3 {
-    color: var(--accent);
-    font-size: 1.7rem;
-    margin-bottom: 15px;
-}
-section p {
-    font-size: 1.2rem;
-}
-@media only screen and (min-width: 768px) {
-    section {
-        padding: 75px;
-    }
-    section h3 {
-        font-size: 2.3rem;
-    }
+    background: linear-gradient(180deg, var(--accent) 0%, var(--accentd) 100%);
 }
 
 footer {
