@@ -140,6 +140,11 @@
                 observer.observe(element)
             })
         })
+
+        let scriptEl = document.createElement('script')
+        scriptEl.setAttribute('lang', 'javascript')
+        scriptEl.setAttribute('src', theme + '.js')
+        document.body.appendChild(scriptEl)
     </script>
 </body>
 </html>
