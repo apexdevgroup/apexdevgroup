@@ -6,18 +6,21 @@
     --hr: #2D2D30;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeInOut {
     from {
-        transform: translateY(50px);
-        opacity: 0;
+        transform: translateY(var(--fadeFrom));
+        opacity: var(--opacity);
     }
     to {
-        transform: translateY(0);
+        transform: translateY(var(--fadeTo));
         opacity: 1;
     }
 }
 .fade-in-up {
-    animation: 0.75s both fadeInUp;
+    --opacity: 0;
+    --fadeFrom: 50px;
+    --fadeTo: 0;
+    animation: 0.75s both fadeInOut;
 }
 
 body {
@@ -78,6 +81,15 @@ header h1 {
 header h1::first-letter {
     background: url(apex-a.png) center/98% no-repeat;
     color: transparent;
+}
+header .stuck {
+    --opacity: 1;
+    --fadeFrom: -50px;
+    --fadeTo: 0;
+    animation: 0.5s both fadeInOut;
+    position: fixed;
+    z-index: 100;
+    border-bottom: 1px solid var(--hr);
 }
 header p {
     color: white;
