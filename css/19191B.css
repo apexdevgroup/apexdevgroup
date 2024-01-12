@@ -1,23 +1,26 @@
 :root {
-    --base: #12222C;
-    --light: #90A0A9;
-    --dark: #081014;
-    --accent: #D5BC72;
-    --accentd: #7B6F45;
+    --base: #19191B;
+    --light: #696871;
+    --dark: #09090B;
+    --accent: #A79865;
+    --hr: #2D2D30;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeInOut {
     from {
-        transform: translateY(50px);
-        opacity: 0;
+        transform: translateY(var(--fadeFrom));
+        opacity: var(--opacity);
     }
     to {
-        transform: translateY(0);
+        transform: translateY(var(--fadeTo));
         opacity: 1;
     }
 }
 .fade-in-up {
-    animation: 0.75s both fadeInUp;
+    --opacity: 0;
+    --fadeFrom: 50px;
+    --fadeTo: 0;
+    animation: 0.75s both fadeInOut;
 }
 
 body {
@@ -34,116 +37,107 @@ a {
     text-decoration: none;
 }
 hr {
-    margin: 0 75px;
-    background-color: var(--light);
-    border: 0;
-    height: 1px;
+    display: none;
 }
 @media only screen and (max-width: 767px) {
     hr {
+        display: block;
+        margin: 0 25px;
+        background-color: var(--hr);
+        border: 0;
+        height: 1px;
         margin: 0 25px;
     }
 }
+
 .btn {
-    display: none;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: var(--accent);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    font-size: 21px;
 }
 
 header {
-    padding: 75px;
-    min-height: 70vh;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: white;
 }
 header h1 {
+    padding: 25px;
     font-family: "Archivo";
     font-weight: 600;
-    font-size: 25rem;
-    text-align: center;
-    padding: 25px 0;
-    margin-bottom: 75px;
+    font-size: 1.5rem;
     text-transform: uppercase;
     background-color: var(--base);
     color: white;
-    line-height: 0.8;
+    width: 100vw;
 }
 header h1::first-letter {
-    background: url(apex-a.png) center/92% no-repeat;
+    background: url(/img/apex-a.png) center/98% no-repeat;
     color: transparent;
 }
-header h1 span {
-    font-size: 6rem;
-    display: block;
+header .stuck {
+    --opacity: 1;
+    --fadeFrom: -50px;
+    --fadeTo: 0;
+    animation: 0.5s both fadeInOut;
+    position: fixed;
+    z-index: 100;
+    border-bottom: 1px solid var(--hr);
+}
+header div {
+    margin: 125px 20%;
 }
 header p {
-    text-align: left;
-    color: var(--dark);
-    font-size: 3.8rem;
-    font-weight: 400;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
 }
 header p b {
+    font-weight: 400;
+}
+header p:not(:last-child) {
+    margin-bottom: 30px;
+}
+header p+p {
+    font-size: 3rem;
     font-weight: 700;
 }
 header p em {
-    color: var(--accentd);
     font-style: initial;
-    font-weight: 700;
+    text-decoration: underline;
 }
 @media only screen and (max-width: 767px) {
     /* Styles for mobile devices */
-    header {
-        min-height: initial;
-        padding: 20px;
+    header div {
+        margin: 25px;
     }
-    header h1 {
-        font-size: 7rem;
-        margin-bottom: initial;
-        line-height: 0.9;
-    }
-    header h1 span {
-        font-size: 1.7rem;
-    }
-    header p {
-        margin: 50px 0;
-        font-size: 1.2rem;
+    header p+p {
+        font-size: 2rem;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     /* Styles for tablets */
-    header h1 {
-        font-size: 13rem;
-    }
-    header h1 span {
-        font-size: 3.1rem;
-    }
-    header p {
-        font-size: 2.5rem;
-    }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1365px) {
     /* Styles for small laptops and desktops */
-    header h1 {
-        font-size: 18rem;
-    }
-    header h1 span {
-        font-size: 4.3rem;
-    }
-    header p {
-        font-size: 3.2rem;
-    }
+}
+@media only screen and (min-width: 1366px) {
+    /* Styles for large desktops */
 }
 
 aside {
-    background-color: var(--accent);
-    background: linear-gradient(180deg, var(--dark) 0%, var(--base) 100%);
     padding: 75px;
+    color: rgba(255, 255, 255, 0.75);
 }
 aside p {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 aside p:not(:last-of-type) {
     margin-bottom: 25px;
@@ -183,18 +177,18 @@ main:has(> div:only-child) {
     }
 }
 main h2 {
-    font-size: 2.8rem;
+    font-size: 1.2rem;
     break-inside: avoid-column;
-    color: var(--accent);
+    color: var(--light);
     margin-bottom: 15px;
     font-weight: 400;
 }
 main h2 + p {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     line-height: 1.8rem;
 }
 main p, main ul li {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 300;
 }
 main h2 + p:not(:last-child) {
@@ -230,7 +224,13 @@ main h2 + p:not(:last-child) {
 }
 
 section {
-    background: linear-gradient(180deg, var(--accent) 0%, var(--accentd) 100%);
+    background: linear-gradient(
+        to top,
+        var(--accent) 0%,
+        var(--accent) 70%,
+        var(--base) 70%,
+        var(--base) 100%
+    );
 }
 
 footer {

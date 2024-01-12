@@ -6,7 +6,7 @@
     <title>APEX DEVELOPMENT GROUP</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap">
-    <link rel="icon" type="image/x-icon" href="apexicon.png">
+    <link rel="icon" type="image/x-icon" href="img/apexicon.png">
     <meta name="description" content="Technical consultancy specializing in front- and back-end software development, API & middleware development, cloud infrastructure, enterprise commerce & CMS integration, and other supporting aspects of modern web & software applications.">
     <style>
         /* CSS RESET */
@@ -34,10 +34,10 @@
         }
     </style>
     <script lang="javascript">
-        const theme = (window.location.hash ? window.location.hash.split('#')[1] : '12222B')
+        const theme = (window.location.hash ? window.location.hash.split('#')[1] : '12222C')
         let cssEl = document.createElement('link')
         cssEl.setAttribute('rel', 'stylesheet')
-        cssEl.setAttribute('href', theme + '.css')
+        cssEl.setAttribute('href', 'css/' + theme + '.css')
         document.head.appendChild(cssEl)
     </script>
 </head>
@@ -143,7 +143,7 @@
 
         let scriptEl = document.createElement('script')
         scriptEl.setAttribute('lang', 'javascript')
-        scriptEl.setAttribute('src', theme + '.js')
+        scriptEl.setAttribute('src', 'js/' + theme + '.js')
         document.body.appendChild(scriptEl)
     </script>
 </body>

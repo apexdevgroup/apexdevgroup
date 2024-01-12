@@ -1,9 +1,9 @@
 :root {
-    --base: #19191B;
-    --light: #696871;
-    --dark: #09090B;
+    --base: #12222C;
+    --light: #6D93A3;
+    --dark: #081014;
     --accent: #A79865;
-    --hr: #2D2D30;
+    --hr: #314F65;
 }
 
 @keyframes fadeInOut {
@@ -78,7 +78,7 @@ header h1 {
     width: 100vw;
 }
 header h1::first-letter {
-    background: url(apex-a.png) center/98% no-repeat;
+    background: url(/img/apex-a.png) center/98% no-repeat;
     color: transparent;
 }
 header .stuck {
