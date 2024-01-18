@@ -70,7 +70,7 @@ header h1 {
     line-height: 0.8;
 }
 header h1::first-letter {
-    background: url(/img/apex-a.png) center/92% no-repeat;
+    background: url(../img/apex-a.png) center/92% no-repeat;
     color: transparent;
 }
 header h1 span {

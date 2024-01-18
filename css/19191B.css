@@ -78,7 +78,7 @@ header h1 {
     width: 100vw;
 }
 header h1::first-letter {
-    background: url(/img/apex-a.png) center/98% no-repeat;
+    background: url(../img/apex-a.png) center/98% no-repeat;
     color: transparent;
 }
 header .stuck {
