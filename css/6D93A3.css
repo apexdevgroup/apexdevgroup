@@ -3,8 +3,6 @@
     --black: 0 0 0;
     --base: 18 34 44;
     --light: 109 147 163;
-    --dark: 8 16 20;
-    --accent: 167 152 101;
 }
 
 @keyframes fadeInOut {
@@ -53,7 +51,7 @@ hr {
 .btn {
     justify-content: center;
     border-radius: 5px;
-    background-color: rgb(var(--accent));
+    background-color: rgb(var(--light));
     color: white;
     display: inline-flex;
     align-items: center;
@@ -79,8 +77,16 @@ header h1 {
     width: 100%;
 }
 /* header h1::first-letter {
-    background: url(../img/apex-a.png) center/125% no-repeat;
+    background: url(../img/apexicon.png) center/100% no-repeat;
     color: transparent;
+} */
+/* header h1:before {
+    background: url(../img/apexicon.png) center/100% no-repeat;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 80px;
 } */
 header .stuck {
     --opacity: 1;
@@ -164,8 +170,11 @@ aside {
     padding: 75px;
 }
 aside p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 300;
+}
+aside p + p {
+    font-size: 1.5rem;
 }
 aside p:not(:last-of-type) {
     margin-bottom: 25px;
@@ -179,6 +188,9 @@ aside p b {
         padding: 50px 25px;
     }
     aside p {
+        font-size: 1.4rem;
+    }
+    aside p + p  {
         font-size: 1.2rem;
     }
 }
@@ -207,7 +219,7 @@ main:has(> div:only-child) {
 main h2 {
     font-size: 1.7rem;
     break-inside: avoid-column;
-    color: rgb(var(--dark));
+    color: rgb(var(--base));
     margin-bottom: 15px;
     font-weight: 400;
 }
