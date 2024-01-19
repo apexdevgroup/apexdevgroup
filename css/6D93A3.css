@@ -5,7 +5,6 @@
     --light: 109 147 163;
     --dark: 8 16 20;
     --accent: 167 152 101;
-    --hr: 49 79 101;
 }
 
 @keyframes fadeInOut {
@@ -39,15 +38,14 @@ a {
     text-decoration: none;
 }
 hr {
-    display: none;
+    display: block;
+    background-color: rgb(var(--light) / 50%);
+    border: 0;
+    height: 1px;
+    margin: 0 75px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     hr {
-        display: block;
-        margin: 0 25px;
-        background-color: rgb(var(--hr));
-        border: 0;
-        height: 1px;
         margin: 0 25px;
     }
 }

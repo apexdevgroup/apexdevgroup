@@ -46,7 +46,6 @@ hr {
         background-color: var(--hr);
         border: 0;
         height: 1px;
-        margin: 0 25px;
     }
 }
 
