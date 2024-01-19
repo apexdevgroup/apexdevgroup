@@ -78,7 +78,7 @@ header h1 {
     text-transform: uppercase;
     color: rgb(var(--base));
     background-color: white;
-    width: 100vw;
+    width: 100%;
 }
 /* header h1::first-letter {
     background: url(../img/apex-a.png) center/125% no-repeat;
