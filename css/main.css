@@ -1,0 +1,8 @@
+/**
+* This is a valid CSS file.
+**/
+.bg-gunmetal { background-color: #12222c; }
+.hover\:bg-gunmetal:hover { background-color: #12222c; }
+.text-gunmetal { color: #12222c; }
+.hover\:text-gunmetal:hover { color: #12222c; }
+
