@@ -236,13 +236,19 @@
           <div class="w-full lg:w-1/2 px-4">
             <div class="py-12 px-8 md:px-10 bg-white rounded-4xl max-w-xl mx-auto lg:mr-0">
               <h4 class="text-3xl tracking-tight mb-8">Contact APEX</h4>
-              <form action="https://getform.io/f/62ac0733-2fcb-483d-9f2d-ae015ec86b1b" method="POST">
-                <input type="hidden" name="_gotcha" style="display:none !important"><label class="hidden" id="label_1" for="input_1" aria-hidden="false">First Name</label>
-                <input type="text" id="input_1" name="input_1" class="block w-full py-4 px-8 h-16 mb-6 text-coolGray-500 bg-white border border-coolGray-400 rounded-full" size="20" placeholder="First Name" aria-labelledby="label_1" value=""><label class="hidden" id="label_2" for="input_2" aria-hidden="false">Last Name</label>
-                <input type="text" id="input_2" name="input_2" class="block w-full py-4 px-8 h-16 mb-6 text-coolGray-500 bg-white border border-coolGray-400 rounded-full" size="20" placeholder="Last Name" aria-labelledby="label_2" value=""><label class="hidden" id="label_3" for="input_3" aria-hidden="false">Email</label>
-                <input type="email" id="input_3" name="input_3" class="block w-full py-4 px-8 h-16 mb-6 text-coolGray-500 bg-white border border-coolGray-400 rounded-full validate[Email]" placeholder="example@example.com" aria-labelledby="label_3" value=""><label class="hidden" id="label_4" for="input_4" aria-hidden="false">Phone Number</label>
-                <input type="text" id="input_4" name="input_4" class="block w-full py-4 px-8 h-16 mb-6 text-coolGray-500 bg-white border border-coolGray-400 rounded-full validate[Fill Mask]" size="310" aria-labelledby="label_4" value="" inputmode="text" maskvalue="(###) ###-####" placeholder="Phone Number"><label class="hidden" id="label_5" for="input_5" aria-hidden="false">Company</label>
-                <input type="text" id="input_5" name="input_5" class="block w-full py-4 px-8 h-16 mb-6 text-coolGray-500 bg-white border border-coolGray-400 rounded-full" size="20" placeholder="Company" aria-labelledby="label_5" value=""><label class="hidden" id="label_6" for="input_6" aria-hidden="false">Purpose</label>
+              <form id="contact-form" accept-charset="UTF-8" method="POST">
+                <input type="hidden" name="_gotcha" style="display:none !important">
+                <label class="hidden" id="label_1" for="input_1" aria-hidden="false">First Name</label>
+                <input required type="text" id="input_1" name="input_1" class="block w-full py-4 px-8 h-16 mb-6 text-coolGray-500 bg-white border border-coolGray-400 rounded-full" size="20" placeholder="First Name*" aria-labelledby="label_1" value="">
+                <label class="hidden" id="label_2" for="input_2" aria-hidden="false">Last Name</label>
+                <input required type="text" id="input_2" name="input_2" class="block w-full py-4 px-8 h-16 mb-6 text-coolGray-500 bg-white border border-coolGray-400 rounded-full" size="20" placeholder="Last Name*" aria-labelledby="label_2" value="">
+                <label class="hidden" id="label_3" for="input_3" aria-hidden="false">Email</label>
+                <input required type="email" id="input_3" name="input_3" class="block w-full py-4 px-8 h-16 mb-6 text-coolGray-500 bg-white border border-coolGray-400 rounded-full validate[Email]" placeholder="example@example.com*" aria-labelledby="label_3" value="">
+                <label class="hidden" id="label_4" for="input_4" aria-hidden="false">Phone Number</label>
+                <input type="text" id="input_4" name="input_4" class="block w-full py-4 px-8 h-16 mb-6 text-coolGray-500 bg-white border border-coolGray-400 rounded-full validate[Fill Mask]" size="310" aria-labelledby="label_4" value="" inputmode="text" maskvalue="(###) ###-####" placeholder="Phone Number">
+                <label class="hidden" id="label_5" for="input_5" aria-hidden="false">Company</label>
+                <input type="text" id="input_5" name="input_5" class="block w-full py-4 px-8 h-16 mb-6 text-coolGray-500 bg-white border border-coolGray-400 rounded-full" size="20" placeholder="Company" aria-labelledby="label_5" value="">
+                <label class="hidden" id="label_6" for="input_6" aria-hidden="false">Purpose</label>
                 <div id="cid_15" class="relative">
                   <span class="absolute top-1/2 right-0 mr-10 transform -translate-y-1/2">
                     <svg width="12" height="8" viewbox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -264,6 +270,25 @@
                 <textarea id="input_7" class="w-full h-52 py-5 px-8 text-coolGray-500 bg-white border border-coolGray-400 rounded-3xl resize-none mb-8" name="input_7" aria-labelledby="label_7" placeholder="Tell us about your project"></textarea>
                 <button id="input_8" type="submit" class="block w-full py-5 px-8 text-center font-medium text-white leading-none bg-black rounded-full transition duration-150 hover:bg-gunmetal" aria-live="polite">Send message</button>
               </form>
+              <div class="w-full inline-flex py-5 pl-12 pr-14 items-center bg-white shadow rounded-full hidden">
+                <span class="mr-4">
+                  <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="21" height="21" rx="10.5" fill="#219653"></rect>
+                    <path d="M15.7676 7.63463C15.4582 7.32482 14.9558 7.32501 14.646 7.63463L9.59787 12.683L7.35419 10.4393C7.04438 10.1295 6.54217 10.1295 6.23236 10.4393C5.92255 10.7491 5.92255 11.2513 6.23236 11.5611L9.03684 14.3656C9.19165 14.5204 9.39464 14.598 9.59765 14.598C9.80067 14.598 10.0039 14.5206 10.1587 14.3656L15.7676 8.75644C16.0775 8.44684 16.0775 7.94443 15.7676 7.63463Z" fill="white"></path>
+                  </svg>
+                </span>
+                <p>We'll be in touch shortly!</p>
+              </div>
+              <div id="contact-form-error" class="w-full mt-5 inline-flex py-4 pl-5 pr-6 items-center bg-red-100 border border-red-500 rounded-3xl hidden">
+                <span class="mr-4">
+                  <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.5013 1.91663C6.2169 1.91663 1.91797 6.21556 1.91797 11.5C1.91797 16.7844 6.2169 21.0833 11.5013 21.0833C16.7857 21.0833 21.0846 16.7844 21.0846 11.5C21.0846 6.21556 16.7857 1.91663 11.5013 1.91663ZM12.1817 16.972C11.9997 17.1442 11.7502 17.25 11.5013 17.25C11.2519 17.25 11.003 17.1442 10.8209 16.972C10.6483 16.79 10.543 16.5406 10.543 16.2916C10.543 16.0422 10.6483 15.7933 10.8209 15.6112C11.185 15.2566 11.8172 15.2566 12.1817 15.6112C12.3539 15.7933 12.4596 16.0422 12.4596 16.2916C12.4596 16.5504 12.3539 16.79 12.1817 16.972ZM12.4596 12.4583C12.4596 12.9875 12.0305 13.4166 11.5013 13.4166C10.9721 13.4166 10.543 12.9875 10.543 12.4583V6.70829C10.543 6.17906 10.9721 5.74996 11.5013 5.74996C12.0305 5.74996 12.4596 6.17906 12.4596 6.70829V12.4583Z"
+                      fill="#FF0000"></path>
+                  </svg>
+                </span>
+                <p class="text-red-900">Something went wrong: <span id="contact-form-error-msg"></span></p>
+              </div>
             </div>
           </div>
         </div>
@@ -285,6 +310,8 @@
       </div>
     </section>
   </div>
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>
