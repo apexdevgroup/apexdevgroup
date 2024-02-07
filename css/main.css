@@ -5,4 +5,11 @@
 .hover\:bg-gunmetal:hover { background-color: #12222c; }
 .text-gunmetal { color: #12222c; }
 .hover\:text-gunmetal:hover { color: #12222c; }
-
+.border-gunmetal {
+    --tw-border-opacity: 1;
+    border-color: rgba(18, 34, 44, var(--tw-border-opacity));
+ }
+.border\:text-gunmetal:hover {
+    --tw-border-opacity: 1;
+    border-color: rgba(18, 34, 44, var(--tw-border-opacity));
+}

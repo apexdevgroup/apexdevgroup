@@ -20,6 +20,11 @@
         <div class="container mx-auto px-4">
           <div class="flex h-24 items-center">
             <h1 class="text-3xl font-heading tracking-tightest uppercase">Apex Development Group</h1>
+            <nav class="hidden lg:flex ml-auto items-center">
+              <a class="inline-block hover:underline mr-10" href="#about">About</a>
+              <a class="inline-block hover:underline mr-10" href="#services">Services</a>
+              <a class="inline-block hover:underline" href="#contact">Contact</a>
+            </nav>
           </div>
         </div>
       </nav>
@@ -54,7 +59,7 @@
       </div>
     </section>
 
-    <section class="py-12 md:pt-24 md:pb-0 bg-coolGray-50">
+    <section id="about" class="py-12 md:pt-24 md:pb-0 bg-coolGray-50">
       <div class="container mx-auto px-4">
         <div class="px-8 mx-auto text-center border-b">
           <p class="tracking-tight mb-14 text-xl lg:text-3xl">Embracing the full spectrum of digital production, we specialize in the end-to-end process of web and app development, crafting immersive user experiences, and seamlessly blending creativity with technology to bring brands to life in the digital world.</p>
@@ -63,7 +68,7 @@
       </div>
     </section>
 
-    <section class="py-14 bg-coolGray-50">
+    <section id="services" class="py-14 bg-coolGray-50">
       <div class="container mx-auto px-4">
         <div class="max-w-2xl mx-auto lg:max-w-none">
           <div class="flex flex-wrap -mx-4">
@@ -169,30 +174,48 @@
       </div>
     </section>
 
-    <section class="py-12 md:py-20 text-white bg-gunmetal hidden">
+    <section id="specialties" class="pb-12 md:pb-20 bg-coolGray-50">
       <div class="container mx-auto px-4">
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full px-4 lg:mb-0 lg:w-7/12 pr-20">
-            <div>
-              <h3 class="font-heading text-6xl sm:text-8xl md:text-10xl tracking-tighter pr-20 mb-4">A few names &amp; faces.</h3>
-              <p class="text-xl">As a group we have delivered &amp; supported technical solutions for over 25 years with brands such as Taco Bell, Movado, LG Electronics, PUMA, The North Face, Levi’s, The Home Depot, many DOD applications, and more.</p>
+        <div class="mb-6 pb-10 pt-20 lg:pt-10 px-10 max-w-xl lg:max-w-none mx-auto bg-white rounded-4xl text-black">
+          <div class="flex flex-wrap -mx-4 items-center">
+            <div class="w-full lg:w-8/12 px-4 mb-12 lg:mb-0">
+              <div class="max-w-sm xl:max-w-2xl mx-auto">
+                <h3 class="text-5xl xl:text-7xl tracking-tight mb-6">The <abbr title="Accessibility">a11y</abbr> way.</h3>
+                <p class="text-lg text-coolGray-600 mb-10">The legal obligation surrounding digital accessibility compliance continues to grow, presenting significant risks to organizations that neglect it. Let's assess your current state of compliance, find some quick wins, and formulate an inclusive strategy for the future.</p>
+                <a class="group inline-flex py-5 px-8 items-center justify-center leading-none font-medium text-black hover:text-white border border-black rounded-full hover:bg-gunmetal hover:border-gunmetal transition duration-200" href="#contact">
+                  <span class="mr-2">Get Accessible</span>
+                  <span class="group-hover:rotate-45 transform transition duration-100">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 1L1 9" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M9 8.33571V1H1.66429" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="w-full lg:w-4/12">
+              <img class="block w-full rounded-3xl" src="img/photo-medium-dark.png" alt="">
             </div>
           </div>
-          <div class="w-full px-4 lg:w-5/12">
-            <div class="flex flex-wrap -mx-4 items-end">
-              <div class="px-4 mb-12 md:w-1/2">
-                <div>
-                  <img class="block mb-6 rounded-full w-24" src="https://ca.slack-edge.com/T0690NA5C5D-U069F8TLRMY-48d6793bade0-512" alt=""><span class="block mb-2 text-md">Managing Director</span>
-                  <span class="block text-2xl sm:text-3xl tracking-tight">Jeremy Helms</span>
-                  <a href="mailto:jhelms@apexdevgroup.net" class="block mb-2 text-sm">jhelms@apexdevgroup.net</a>
-                </div>
-              </div>
-              <div class="px-4 mb-12 md:w-1/2">
-                <div class="">
-                  <img class="mb-6 rounded-full w-24 block" src="https://ca.slack-edge.com/T0690NA5C5D-U06923NUXBR-209830f5f6f5-512" alt=""><span class="block mb-2 text-md">VP, Technology</span>
-                  <span class="block text-2xl sm:text-3xl tracking-tight">David Davis</span>
-                  <a href="mailto:davisd@apexdevgroup.net" class="block mb-2 text-sm">davisd@apexdevgroup.net</a>
-                </div>
+        </div>
+        <div class="pb-10 pt-20 lg:pt-10 px-10 max-w-xl lg:max-w-none mx-auto bg-white rounded-4xl">
+          <div class="flex flex-wrap -mx-4 items-center">
+            <div class="w-full lg:w-4/12 order-last lg:order-first">
+              <img class="block w-full rounded-3xl" src="img/photo-medium-light.png" alt="">
+            </div>
+            <div class="w-full lg:w-8/12 px-4 mb-12 lg:mb-0">
+              <div class="max-w-sm xl:max-w-2xl mx-auto">
+                <h3 class="text-5xl xl:text-7xl tracking-tight mb-6">Snappy site, smiling users.</h3>
+                <p class="text-lg text-coolGray-600 mb-10">47% of users expect a webpage to load in 2 seconds or less. &#x1F633; Performance metrics are critical, let's get an in-depth analysis of your website's speed &amp; bottlenecks, including real user &amp; synthetic metrics, competitor benchmarking, Core Web Vitals, and more.</p>
+                <a class="group inline-flex py-5 px-8 items-center justify-center leading-none font-medium text-black hover:text-white border border-black rounded-full hover:bg-gunmetal hover:border-gunmetal transition duration-200" href="#contact">
+                  <span class="mr-2">Get Testing</span>
+                  <span class="group-hover:rotate-45 transform transition duration-100">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 1L1 9" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M9 8.33571V1H1.66429" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -200,7 +223,8 @@
       </div>
     </section>
 
-    <section class="relative py-12 md:py-20 bg-coolGray-50 overflow-hidden text-black"><img class="absolute top-0 left-0 w-full h-full object-cover opacity-30" src="img/6.jpg" alt="">
+    <section id="contact" class="relative py-12 md:py-20 bg-coolGray-50 overflow-hidden text-black">
+      <img class="absolute top-0 left-0 w-full h-full object-cover opacity-30" src="img/6.jpg" alt="">
       <div class="relative container mx-auto px-4">
         <div class="flex flex-wrap -mx-4">
           <div class="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
@@ -274,6 +298,8 @@
                     <option value="Managed Services, Storage, Hosting">Managed Services, Storage, Hosting</option>
                     <option value="Platform Integration">Platform Integration</option>
                     <option value="Artificial Intelligence">Artificial Intelligence</option>
+                    <option value="Accessibility Audit">Accessibility Audit</option>
+                    <option value="Website Performance Audit">Website Performance Audit</option>
                     <option value="Other">Other</option>
                   </select>
                 </div>
