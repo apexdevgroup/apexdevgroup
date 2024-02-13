@@ -1,15 +1,16 @@
-/**
-* This is a valid CSS file.
-**/
-.bg-gunmetal { background-color: #12222c; }
-.hover\:bg-gunmetal:hover { background-color: #12222c; }
-.text-gunmetal { color: #12222c; }
-.hover\:text-gunmetal:hover { color: #12222c; }
+:root {
+    --gunmetal-hex: #12222C;
+    --gunmetal-rgb: 18 34 44;
+}
+.bg-gunmetal { background-color: var(--gunmetal-hex); }
+.hover\:bg-gunmetal:hover { background-color: var(--gunmetal-hex); }
+.text-gunmetal { color: var(--gunmetal-hex); }
+.hover\:text-gunmetal:hover { color: var(--gunmetal-hex); }
 .border-gunmetal {
     --tw-border-opacity: 1;
-    border-color: rgba(18, 34, 44, var(--tw-border-opacity));
+    border-color: rgba(var(--gunmetal-rgb), var(--tw-border-opacity));
  }
 .hover\:border-gunmetal:hover {
     --tw-border-opacity: 1;
-    border-color: rgba(18, 34, 44, var(--tw-border-opacity));
+    border-color: rgba(var(--gunmetal-rgb), var(--tw-border-opacity));
 }
