@@ -9,7 +9,7 @@
     --tw-border-opacity: 1;
     border-color: rgba(18, 34, 44, var(--tw-border-opacity));
  }
-.border\:text-gunmetal:hover {
+.hover\:border-gunmetal:hover {
     --tw-border-opacity: 1;
     border-color: rgba(18, 34, 44, var(--tw-border-opacity));
 }
