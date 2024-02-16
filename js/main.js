@@ -1,3 +1,29 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('section div') // fade all the things
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.35 // adjust threshold as needed
+    }
+
+    const handleIntersection = (elements, observer) => {
+        elements.forEach((element) => {
+            if (element.isIntersecting && element.intersectionRatio > 0) {
+                element.target.classList.add('fade-in-up')
+                observer.unobserve(element.target)
+            }
+        })
+    }
+
+    const observer = new IntersectionObserver(handleIntersection, options)
+
+    elements.forEach((element) => {
+        element.style.setProperty('opacity', 0) // prevent fouc/foutc
+        observer.observe(element)
+    })
+})
+
 const formEl = document.getElementById('contact-form')
 const errEl = document.getElementById('contact-form-error')
 const errMsgEl = document.getElementById('contact-form-error-msg')

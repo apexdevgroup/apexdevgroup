@@ -14,3 +14,20 @@
     --tw-border-opacity: 1;
     border-color: rgba(var(--gunmetal-rgb), var(--tw-border-opacity));
 }
+
+@keyframes fadeInOut {
+    from {
+        transform: translateY(var(--fadeFrom));
+        opacity: var(--opacity);
+    }
+    to {
+        transform: translateY(var(--fadeTo));
+        opacity: 1;
+    }
+}
+.fade-in-up {
+    --opacity: 0;
+    --fadeFrom: 50px;
+    --fadeTo: 0;
+    animation: 0.75s both fadeInOut;
+}
